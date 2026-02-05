@@ -1,0 +1,100 @@
+/* Blog container */
+.blog {
+    position: relative;
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+/* Title and article styling */
+.title,
+.article {
+    width: 100%;
+    min-height: 50px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #2d2d2d;
+    white-space: normal;
+}
+
+/* Published date */
+.published {
+    margin: 20px 0 40px;
+    padding: 0 10px;
+    font-style: italic;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.published span {
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* All elements inside article */
+.article * {
+    margin: 20px 0;
+    color: #2d2d2d;
+}
+
+/* Images inside article */
+.article img,
+.article-image {
+    max-width: 100%;
+    max-height: 400px;
+    display: block;
+    margin: 20px auto;
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+/* Sub-heading styling */
+.sub-heading {
+    padding: 0 5vw;
+    color: #2d2d2d;
+    font-weight: 500;
+    font-size: 36px;
+    margin-top: 60px;
+    text-align: center;
+}
+
+/* Optional: make blog content responsive */
+@media (max-width: 768px) {
+    .title,
+    .article {
+        font-size: 16px;
+        padding: 8px;
+    }
+
+    .sub-heading {
+        font-size: 28px;
+        margin-top: 40px;
+    }
+}
+
+/* Video container below article */
+.video-container {
+    margin: 30px auto;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Embedded video frame */
+.video-container iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9; /* keeps correct video ratio */
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Responsive video */
+@media (max-width: 768px) {
+    .video-container iframe {
+        height: 250px;
+    }
+}

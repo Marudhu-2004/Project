@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Editor</title>
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/editor.css">
+</head>
+<body>
+
+  <!-- Banner Upload -->
+  <div class="banner">
+    <input type="file" accept="image/*" id="banner-upload" hidden>
+    <label for="banner-upload">
+      <img src="img/upload.png" alt="upload">
+    </label>
+  </div>
+
+  <!-- Blog Title & Content -->
+  <div class="blog">
+    <textarea class="title" placeholder="Title..."></textarea>
+    <textarea class="article" placeholder="Start writing..."></textarea>
+  </div>
+
+  <!-- Blog Options -->
+  <div class="blog-options">
+    <!-- Publish Button -->
+    <button class="btn dark publish-btn">Publish</button>
+
+    <!-- Upload Inline Image -->
+    <input type="file" accept="image/*" id="image-upload" hidden>
+    <label for="image-upload" class="btn grey upload-btn">Upload Image</label>
+
+    <!-- Video Input -->
+    <input type="url" id="video-url" class="video-input" placeholder="Paste YouTube or Video link (optional)">
+
+    <!-- Category Dropdown -->
+    <select id="category" class="btn grey">
+      <option value="general">General</option>
+      <option value="technology">Technology</option>
+      <option value="health">Health</option>
+      <option value="travel">Travel</option>
+      <option value="news">News</option>
+    </select>
+  </div>
+
+  <!-- Scripts -->
+  <script type="module" src="js/firebase.js"></script>
+  <script type="module" src="js/editor.js"></script>
+</body>
+</html>

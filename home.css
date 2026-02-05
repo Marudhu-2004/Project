@@ -1,0 +1,318 @@
+/* ================= RESET & BASIC STYLES ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    background: #f9f9f9;
+}
+
+::selection {
+    background: #1b1b1b;
+    color: #fff;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5vw;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 100;
+}
+
+.links-container {
+    display: flex;
+    list-style: none;
+}
+
+.link {
+    padding: 10px;
+    margin-left: 15px;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: #000;
+    transition: color 0.2s;
+}
+
+.link:hover {
+    color: #1b1b1b;
+    font-weight: 500;
+}
+
+/* ================= HEADER ================= */
+.header {
+    margin-top: 60px;
+    width: 100%;
+    height: calc(100vh - 60px);
+    background: url('../img/header.png') no-repeat center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    text-align: center;
+    color: #fff;
+}
+
+.heading {
+    font-size: 80px;
+    line-height: 1.2;
+    margin-bottom: 40px;
+    text-transform: capitalize;
+}
+
+.heading .small {
+    display: block;
+    font-size: 40px;
+}
+
+.heading .no-fill {
+    font-style: italic;
+    color: tomato;
+    -webkit-text-stroke: 2px #fff;
+}
+
+/* ================= BUTTONS ================= */
+.btn {
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: 700;          /* bold */
+    text-transform: capitalize;
+    cursor: pointer;            /* pointer on hover */
+    transition: all 0.2s ease;
+    border: none;               /* no border, clean look */
+    outline: none;
+    background-color: #fffefe; /* dark background */
+    color: #000000;                /* white text */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* visible shadow */
+}
+
+.btn:hover {
+    background-color: #f1f1f1;      /* slightly lighter on hover */
+    transform: translateY(-2px);
+}
+
+/* Dark button for publish/read */
+.btn.dark {
+    background: #1b1b1b;
+    color: #fff;
+}
+
+.btn.dark:hover {
+    background: #333;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+/* Light/Grey button for upload */
+.btn.light,
+.btn.grey {
+    background: #a5a5a5;
+    color: #fff;
+}
+
+.btn.light:hover,
+.btn.grey:hover {
+    background: #8c8c8c;
+    transform: translateY(-1px);
+}
+
+/* ================= BLOG SECTION ================= */
+.blogs-section {
+    width: 100%;
+    padding: 50px 5vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.blog-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+}
+
+.blog-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.blog-title {
+    font-size: 22px;
+    font-weight: 600;
+    padding: 15px;
+}
+
+.blog-overview {
+    padding: 0 15px 15px;
+    line-height: 1.5;
+    color: #2d2d2d;
+    flex-grow: 1;
+}
+
+/* ================= EDITOR PAGE ================= */
+.banner {
+    width: 100%;
+    height: 400px;
+    position: relative;
+    background: #e7e7e7;
+    background-size: cover;
+    background-position: center;
+    border-bottom: 1px solid #ccc;
+}
+
+.banner-upload-btn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.banner-upload-btn:hover {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.banner-upload-btn img {
+    width: 20px;
+}
+
+.blog {
+    width: 70vw;
+    max-width: 900px;
+    min-width: 400px;
+    margin: 30px auto 150px;
+    padding: 0 20px;
+}
+
+textarea::-webkit-scrollbar {
+    width: 8px;
+}
+
+textarea::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.title,
+.article {
+    width: 100%;
+    outline: none;
+    resize: none;
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    color: #2d2d2d;
+    font-family: 'Arial', sans-serif;
+}
+
+.title {
+    min-height: 60px;
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.title::placeholder {
+    color: #999;
+}
+
+.article {
+    min-height: 400px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.6;
+    margin-top: 20px;
+    white-space: pre-wrap;
+}
+
+.article::placeholder {
+    color: #999;
+}
+
+/* Editor footer options */
+.blog-options {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+    z-index: 10;
+}
+
+.blog-options .btn.dark {
+    font-size: 18px;
+    padding: 12px 30px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+    .heading {
+        font-size: 48px;
+    }
+
+    .heading .small {
+        font-size: 24px;
+    }
+
+    .blogs-section {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .blog-image {
+        height: 180px;
+    }
+
+    .blog {
+        width: 90%;
+        padding: 0 10px;
+    }
+
+    .title {
+        font-size: 28px;
+    }
+
+    .article {
+        font-size: 16px;
+    }
+
+    .blog-options .btn.dark {
+        font-size: 16px;
+        padding: 10px 25px;
+    }
+}
